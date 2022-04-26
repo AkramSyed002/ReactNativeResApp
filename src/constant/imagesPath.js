@@ -11,5 +11,6 @@ export default {
 	notification: require('../assets/notification.png'),
 	Location: require('../assets/location.png'),
 	booking: require('../assets/booking.png'),
+	myProfile: require('../assets/myProfile.png'),
 
 }

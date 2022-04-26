@@ -1,11 +1,12 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, SafeAreaView } from 'react-native'
 import React from 'react'
 
 const Booking = () => {
 	return (
-		<View>
-			<Text>Booking</Text>
-		</View>
+		<SafeAreaView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+			<Text>Your's Bookings here</Text>
+
+		</SafeAreaView>
 	)
 }
 

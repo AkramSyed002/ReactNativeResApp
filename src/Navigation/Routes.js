@@ -9,7 +9,7 @@ import HomeStack from './HomeStack';
 
 
 function Routes() {
-	const [user, setUser] = useState(true)
+	const [user, setUser] = useState(false)
 	return (
 		<NavigationContainer>
 			{user ? HomeStack() : AuthStack()}
