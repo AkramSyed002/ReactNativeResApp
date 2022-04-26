@@ -7,3 +7,5 @@ export default [{ name: navigationStrings.Login, component: Login },
 { name: navigationStrings.Register, component: Register },
 { name: navigationStrings.SetPassword, component: SetPassword },
 { name: navigationStrings.Home, component: Home }]
+
+

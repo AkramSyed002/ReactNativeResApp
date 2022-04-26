@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { moderateScale, scale } from "react-native-size-matters";
+import imagesPath from "../constant/imagesPath";
 import colors from "../styles/colors";
 
 const MyButton = ({
@@ -17,7 +18,10 @@ const MyButton = ({
       style={[styles.btnStyle, { ...btnStyle }]}
     >
       {!!img ? (
-        <Image style={{ tintColor: colors.white }} source={img} />
+        <Image
+          style={{ tintColor: colors.white, height: 20, width: 20 }}
+          source={imagesPath.icForward}
+        />
       ) : (
         <Text style={[styles.btnTextStyle, { ...btnTextStyle }]}>
           {btnText}

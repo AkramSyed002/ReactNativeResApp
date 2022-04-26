@@ -8,3 +8,5 @@ export { default as Register } from '../screens/register/Register';
 
 // Protected Screens
 export { default as Home } from '../screens/home/Home';
+export { default as Booking } from '../screens/booking/Booking';
+export { default as Profile } from '../screens/profile/Profile';

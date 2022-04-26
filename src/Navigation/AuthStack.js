@@ -10,10 +10,8 @@ const Stack = createNativeStackNavigator();
 
 export default function AuthStack() {
 	return (
-
 		<Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={Login}>
 			{navigationScreenOptions.map((screen, index) => (
-
 				<Stack.Screen name={screen.name} component={screen.component} key={index.toString()} />
 			))}
 		</Stack.Navigator>
@@ -21,12 +19,11 @@ export default function AuthStack() {
 }
 
 
-
 const navigationScreens = [
 	{ name: navigationStrings.Login, component: Login },
 	{ name: navigationStrings.ChooseAccount, component: ChooseAccount },
-	{ name: navigationStrings.ForgotPassword, component: ForgotPassword },
 	{ name: navigationStrings.Register, component: Register },
+	{ name: navigationStrings.ForgotPassword, component: ForgotPassword },
 	{ name: navigationStrings.SetPassword, component: SetPassword },
 	{ name: navigationStrings.Home, component: Home },
 ]

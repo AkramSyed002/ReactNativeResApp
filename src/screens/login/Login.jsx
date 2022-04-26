@@ -27,65 +27,69 @@ const Login = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <ImageBackground
-        style={styles.image}
-        source={{
-          uri: "https://im.indiatimes.in/content/itimes/photo/2016/Jul/21/1469099512-cutest-baby-images-you-cant-ignore-this-little-one.jpg",
-        }}
-      >
-        <Text style={styles.loginText}>Login</Text>
-      </ImageBackground>
-      <View style={styles.inputContainer}>
-        <MyInputField
-          title="Email Address"
-          placeHolder="Enter Your Email Address"
-          inputStyle={{ marginBottom: moderateVerticalScale(28) }}
-          keyboardType="email-address"
-        />
-        <MyInputField
-          title="Password"
-          placeHolder="Enter Your Password"
-          secureTextEntry={visible}
-          keyboardType=""
-          rightIcon={
-            !visible ? imagesPath.icNotShowPass : imagesPath.icShowPass
-          }
-          onPressIcon={() => setVisible(!visible)}
-        />
-
-        <TouchableOpacity
-          activeOpacity="0.7"
-          style={{
-            alignSelf: "flex-end",
-            marginVertical: moderateVerticalScale(24),
+      <View>
+        <ImageBackground
+          style={styles.image}
+          source={{
+            uri: "https://im.indiatimes.in/content/itimes/photo/2016/Jul/21/1469099512-cutest-baby-images-you-cant-ignore-this-little-one.jpg",
           }}
         >
-          <Text
+          <Text style={styles.loginText}>Login</Text>
+        </ImageBackground>
+        <View style={styles.inputContainer}>
+          <MyInputField
+            title="Email Address"
+            placeHolder="Enter Your Email Address"
+            inputStyle={{ marginBottom: moderateVerticalScale(28) }}
+            keyboardType="email-address"
+          />
+          <MyInputField
+            title="Password"
+            placeHolder="Enter Your Password"
+            secureTextEntry={visible}
+            keyboardType=""
+            rightIcon={
+              !visible ? imagesPath.icNotShowPass : imagesPath.icShowPass
+            }
+            onPressIcon={() => setVisible(!visible)}
+          />
+
+          <TouchableOpacity
+            activeOpacity="0.7"
             style={{
-              color: colors.themeColor,
-              fontWeight: "200",
-              fontSize: scale(16),
+              alignSelf: "flex-end",
+              marginVertical: moderateVerticalScale(24),
             }}
           >
-            Forgot Password?
-          </Text>
-        </TouchableOpacity>
-        <MyButton btnText="Login" onPress={handleOnPress} />
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: moderateVerticalScale(72),
-          }}
-        >
-          <Text>Not a Member</Text>
-          <TouchableOpacity
-            onPress={() => navigation.navigate(navigationStrings.Register)}
-          >
-            <Text> Join Now</Text>
+            <Text
+              style={{
+                color: colors.themeColor,
+                fontWeight: "200",
+                fontSize: scale(16),
+              }}
+            >
+              Forgot Password?
+            </Text>
           </TouchableOpacity>
+          <MyButton btnText="Login" onPress={handleOnPress} />
         </View>
+      </View>
+
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: moderateVerticalScale(72),
+          marginBottom: moderateVerticalScale(44),
+        }}
+      >
+        <Text>Not a Member</Text>
+        <TouchableOpacity
+          onPress={() => navigation.navigate(navigationStrings.ChooseAccount)}
+        >
+          <Text> Join Now</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -96,6 +100,7 @@ export default Login;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: "space-between",
   },
   image: {
     width: "100%",
@@ -110,6 +115,6 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     paddingHorizontal: moderateScale(24),
-    paddingVertical: moderateVerticalScale(44),
+    paddingTop: moderateVerticalScale(44),
   },
 });
